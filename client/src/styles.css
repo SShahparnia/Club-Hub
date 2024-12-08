@@ -1,0 +1,140 @@
+body {
+  font-family: "Whitney", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px; /* Default size */
+  line-height: 1.5; /* Comfortable line height */
+}
+
+/* Light and dark mode adjustments */
+body.light-mode {
+  background-color: #ffffff;
+  color: black;
+}
+
+body.dark-mode {
+  background-color: #2b2b2b;
+  color: white;
+}
+
+/* Chatroom container font */
+.chatroom-container {
+  font-family: "Whitney", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px; /* Slightly smaller for chat text */
+  line-height: 1.4;
+}
+
+/* src/styles.css */
+body.dark-mode {
+  background-color: #2b2b2b; /* Softer black for the webpage background */
+  color: white;
+}
+
+body.dark-mode a {
+  color: white;
+}
+
+body.dark-mode .navbar {
+  background-color: #3c3c3c; /* lighter black for the navbar in dark mode */
+  color: white;
+}
+
+.navbar {
+  background-color: #f6f8fa; /* Lighter grey for the navbar in light mode */
+  color: black;
+}
+
+.side-navbar {
+  background-color: #f6f8fa; /* Lighter grey for the sidebar in light mode */
+  color: black;
+}
+
+body.dark-mode .side-navbar {
+  background-color: #3c3c3c; /* Darker background for the sidebar in dark mode */
+  color: white;
+}
+
+.text {
+  color: black;
+}
+
+body.dark-mode .text {
+  color: white;
+}
+
+.light-mode {
+  color: black;
+}
+
+.dark-mode {
+  color: white;
+}
+
+.container {
+  background-color: #ffffff;
+  color: black;
+}
+
+body.dark-mode .container {
+  background-color: #3c3c3c; /* Darker background for the container in dark mode */
+  color: white;
+}
+
+.club-card {
+  background-color: #f6f8fa; /* Lighter grey for the club cards in light mode */
+  color: black;
+}
+
+body.dark-mode .club-card {
+  background-color: #3c3c3c; /* Darker background for the club cards in dark mode */
+  color: white;
+}
+
+.club-card:hover {
+  background-color: #e9ecef; /* Lighter grey for the club cards in light mode */
+}
+
+body.dark-mode .club-card:hover {
+  background-color: #5a5a5a; /* Darker background for the club cards in dark mode */
+}
+
+.text-area {
+  background-color: #f6f8fa; /* Lighter grey for the text area in light mode */
+  color: black;
+}
+
+body.dark-mode .text-area {
+  background-color: #3c3c3c; /* Darker background for the text area in dark mode */
+  color: white;
+}
+
+.text-area::placeholder {
+  color: #6c757d; /* Lighter grey for the placeholder text in light mode */
+}
+
+body.dark-mode .text-area::placeholder {
+  color: #f6f8fa; /* Lighter grey for the placeholder text in dark mode */
+}
+
+.page-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.thread-item {
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.thread-item:hover {
+  border-color: #898989;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.thread-item:active {
+  transform: translateY(0px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

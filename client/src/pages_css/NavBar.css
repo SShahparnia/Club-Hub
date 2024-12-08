@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.navbar h2 {
+    margin: 0px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 15px;
+}
+
+.navbar button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar .logout-button {
+    background-color: #ff6961; /* soft red color */
+    color: white;
+    margin-right: 10px; /* Add margin to space out buttons */
+    font-size: 16px; /* Increase font size */
+}
+
+.navbar .toggle-dark-mode {
+    background-color: #3c3c3c;
+    color: white;
+    font-size: 16px; /* Increase font size */
+}
+
+body.dark-mode .navbar .toggle-dark-mode {
+    background-color: white;
+    color: black;
+}

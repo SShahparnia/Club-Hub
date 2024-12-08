@@ -1,0 +1,380 @@
+/* Right Sidebar: Club Member List */
+.member-list {
+  height: 100%; /* Full height */
+  width: 15%; /* Full width */
+  margin-top: 0px; /* Push the member list below the top navbar */
+  margin-left: 20px; /* Add space between the chat and member list */
+  margin-right: -20px; /* Add space between the chat and member list */
+  padding: 10px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #f6f8fa; /* Background for light mode */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column; /* Ensure members stack vertically */
+}
+body.dark-mode .member-list {
+  background-color: #3c3c3c; /* Background for dark mode */
+}
+
+.member-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.member-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.member-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.member-list li:hover {
+  background-color: #e9ecef;
+}
+
+body.dark-mode .member-list li:hover {
+  background-color: #5a5a5a;
+}
+
+.member-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #d1d1d1; /* Placeholder background for avatars */
+}
+
+body.dark-mode .member-avatar {
+  background-color: #4a4a4a;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.member-username {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+body.dark-mode .member-username {
+  color: #b9bbbe;
+}
+
+/* Adjust chatroom container to include the member list */
+.chatroom-member-container {
+  display: flex;
+  flex-direction: row; /* Align chat and member list side by side */
+  height: calc(100vh - 100px); /* Adjust height to account for the header */
+  width: 100%;
+  overflow: hidden; /* Prevent scrolling past container boundaries */
+}
+
+/* Main chat section now takes up 75% of the width */
+.chatroom-messages {
+  flex: 7;
+  height: calc(100vh - 150px); /* Adjust based on your header and input height */
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Light and dark mode variables */
+body.light-mode {
+  --container-bg: #ffffff; /* Light background */
+  --text-color: black; /* Dark text */
+}
+
+body.dark-mode {
+  --container-bg: #2b2b2b; /* Dark background */
+  --text-color: white; /* Light text */
+}
+
+/* Set text color dynamically */
+.chatroom-member-container {
+  color: var(--text-color);
+}
+
+/* Message styles */
+.message {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f6f8fa; /* Light background for messages in light mode */
+  color: black;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stack username, content, and timestamp */
+}
+
+.message-username {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #7289da;
+}
+
+body.dark-mode .message {
+  background-color: #3c3c3c;
+}
+
+body.dark-mode .message-username {
+  color: #7289da;
+}
+
+body.dark-mode .message {
+  background-color: #3c3c3c; /* Dark background for messages in dark mode */
+  color: white;
+}
+
+/* Replied message (inline above the main message) */
+.replied-message {
+  background-color: #e9ecef;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #6c757d; /* Muted text color */
+}
+
+body.dark-mode .replied-message {
+  background-color: #2f3136; /* Darker background for replies */
+  color: #b9bbbe; /* Muted grey in dark mode */
+}
+
+/* Main message content */
+.message-content {
+  font-size: 1rem;
+  color: black;
+}
+
+body.dark-mode .message-content {
+  color: white;
+}
+
+/* Timestamp (hidden by default, shown on hover) */
+.timestamp {
+  font-size: 0.8rem;
+  color: #6c757d;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+
+body.dark-mode .timestamp {
+  color: #b9bbbe;
+}
+
+/* Reply button (hidden by default, shown on hover) */
+.reply-button {
+  font-size: 0.8rem;
+  background: none;
+  border: none;
+  color: #7289da;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  visibility: hidden;
+}
+
+.message:hover .reply-button {
+  visibility: visible;
+}
+
+.reply-button:hover {
+  text-decoration: underline;
+}
+
+/* Input section */
+.chatroom-input {
+  display: flex;
+  flex-direction: column; /* Stack reply indicator above input + button */
+  padding: 0px;
+  background-color: #f6f8fa; /* Input background for light mode */
+}
+
+body.dark-mode .chatroom-input {
+  background-color: #3c3c3c; /* Input background for dark mode */
+}
+
+/* Reply indicator positioned above the text input */
+.reply-indicator {
+  display: flex;
+  justify-content: space-between; /* Align the cancel button to the right */
+  align-items: center;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  margin-bottom: 10px; /* Space between the reply indicator and the input */
+  color: black;
+  gap: 10px; /* Space between the text and the cancel button */
+}
+
+body.dark-mode .reply-indicator {
+  background-color: #3c3c3c;
+  color: white;
+}
+
+.reply-indicator button {
+  background: none;
+  border: none;
+  color: #7289da;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.chatroom-input-container {
+  display: flex;
+  width: 100%; /* Full width for input container */
+  flex-direction: column; /* Stack reply indicator above input + button */
+  padding: 10px; /* Add padding around the input section */
+}
+
+/* Input and button row layout */
+.chat-input-container {
+  display: flex;
+  flex-direction: row; /* Input and button side by side */
+  align-items: center;
+  gap: 10px; /* Space between input and button */
+  height: 45px; /* Set the height of the input bar */
+  width: 100%; /* Ensure it takes the full width of the parent */
+}
+
+.chatroom-input input {
+  flex-grow: 1; /* Let the input take up remaining space */
+  height: 100%;
+  padding: 0px 10px; /* Add padding inside the input */
+  border: none;
+  border-radius: 5px;
+  background-color: #e9ecef;
+  color: black;
+}
+
+body.dark-mode .chatroom-input input {
+  background-color: #5a5a5a;
+  color: white;
+}
+
+.chatroom-input input::placeholder {
+  color: #6c757d; /* Placeholder text in light mode */
+}
+
+body.dark-mode .chatroom-input input::placeholder {
+  color: #f6f8fa; /* Placeholder text in dark mode */
+}
+
+/* Send button */
+.chatroom-input button {
+  height: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: white;
+  cursor: pointer;
+}
+
+.chatroom-input button:hover {
+  background-color: #5b6eae;
+}
+
+/* Customize scrollbar for the chat messages container */
+.chatroom-messages::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.chatroom-messages::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track background for light mode */
+}
+
+body.dark-mode .chatroom-messages::-webkit-scrollbar-track {
+  background: #3c3c3c; /* Track background for dark mode */
+}
+
+.chatroom-messages::-webkit-scrollbar-thumb {
+  background-color: #7289da; /* Thumb color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.chatroom-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #5b6eae; /* Darker thumb color on hover */
+}
+
+/* Optional: Style scrollbar corner (useful for overflow content) */
+.chatroom-messages::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox scrollbar customization */
+.chatroom-messages {
+  scrollbar-width: thin; /* Makes the scrollbar thinner */
+  scrollbar-color: #7289da #f1f1f1; /* Thumb and track colors */
+}
+
+body.dark-mode .chatroom-messages {
+  scrollbar-color: #7289da #3c3c3c; /* Dark mode colors */
+}
+
+.mention {
+  color: #007bff; /* Highlight color for mentions */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.mention:hover {
+  text-decoration: underline;
+}
+
+/* Highlight mentionable members in the member list */
+.mentionable-member {
+  cursor: pointer;
+}
+
+.mentionable-member:hover {
+  background-color: #e9ecef;
+}
+
+.mention-suggestions {
+  position: absolute;
+  bottom: 60px; /* Adjust this based on your input bar position */
+  left: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px; /* Limit the dropdown height */
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  width: 300px; /* Adjust width as needed */
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.suggestion-item:hover,
+.suggestion-item.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
