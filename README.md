@@ -111,111 +111,17 @@ To get started with Club Hub, follow these steps:
 
    Once you login, explore and have fun!
 
-## Contributions
+## Contributers
 
+- **Shervan Shahparnia:**
+  
 - **Hoang Nguyen:**
-
-  - Non-technical:
-
-    - Pitched the idea of Club Management Web App
-    - Contributed to project proposal
-    - Organized meetings
-    - Determined tech stack
-    - Contributed and reviewed EER diagram
-    - Contributed to presentation slides
-    - Contributed to relational model documentation
-    - Kept track of meeting minutes
-    - Contributed to part of final report
-    - Wrote the README.md file
-    - Created Club Hub Logo
-
-  - Code:
-    - Set up the Github repository and initial project structure with Nathan Durrant
-    - Set up the initial backend server and frontend structure
-    - Implemented threads page, create thread, and reply to thread functionalities
-    - Implemented post page and contributed to part of post comment functionality
-    - Implemented events page, created event, and registered for event functionalities
-    - Contributed to part of search club functionality
-    - Fixed bugs for signup, post's comments, and dashboard functionalities
-    - Fixed other minor bugs
 
 - **Nathan Durrant:**
 
-  - Non-technical:
-
-    - Organized meetings
-    - Determined tech stack
-    - Contributed to project proposal
-    - Contributed to and reviewed EER diagram
-    - Contributed to final presentation slides
-    - Normalized relational tables to BCNF
-    - Finalized relational model documentation
-    - Contributed to part of final report
-
-  - Code:
-    - Assisted Hoang in setting up file structure after intial setup
-    - Implemented login page and login functionality
-    - Connected club display in dashboard to the backend
-    - Implemented indexing in our create table statements to improve performance
-    - Updated implementation of role checking to check if the user is specifically the owner of the club
-
-- **Shervan Shahparnia:**
-
-  - Non-technical:
-
-    - Pitched the idea for the name of our web app "Club Hub"
-    - Contributed to project proposal
-    - Contributed to and reviewed EER diagram (Finalized EER diagram and reorganized for readability)
-    - Contributed to presentation slides
-    - Contributed to relational model documentation discussion
-    - Kept track of meeting minutes
-    - Contributed to part of final report
-
-  - Code:
-    - Implemented initial dashboard page with club creation, application navigation bar, & dark mode functionality
-    - Implemented Club member list and @mention functionality within Chat Room
-    - Assisted Nathan Cohn in implementing and discussing design decisions for navigation systems
-    - Contributed to various styling factors for client
-
 - **Aaron Sam:**
 
-  - Non-technical:
-
-    - Contributed to project proposal
-    - Contributed to presentation slides
-    - Contributed to relational model documentation discussion
-    - Kept track of meeting minutes
-    - Contributed to part of final report
-
-  - Code:
-    - Implemented intial search page for the list of clubs and the comment feature for the post page
-    - Contributed to the backend database functionality
-    - Contributed to various styling factors for client
-
 - **Nathan Cohn:**
-
-  - Non-technical:
-
-    - Helped with the project proposal.
-    - Contributed to and reviewed the EER diagram.
-    - Worked on mapping the EER diagram to relational tables.
-    - Helped normalize relational tables to BCNF.
-    - Introduced the idea for chatroom and comments.
-    - Removed redundancies in the EER diagram.
-    - Assisted with the final report.
-
-  - Code:
-    - Implemented and fixed dark mode for most webpages.
-    - Implemented a User context to track logged-in users and save them to local storage.
-    - Created the sign-up page and its respective backend query.
-    - Implemented Private Routes to ensure the user is logged in.
-    - Developed the ChatRoom page and messaging system with related backend queries.
-    - Built the Side Bar for navigation throughout club pages with related backend queries.
-    - Added checks to ensure users can create only one club, along with the necessary queries.
-    - Fixed and reorganized navigation to be more user-friendly and useful for frontend code.
-    - Created database files such as `create`, `insert`, and `drop` scripts.
-    - Debugged database files to ensure consistent and valid database access.
-    - Adjusted and debugged CSS on some pages to ensure correct frontend implementation.
 
 ## Documentation
 
